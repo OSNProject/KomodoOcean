@@ -1736,6 +1736,19 @@ void komodo_args(char *argv0)
         LogPrintf( "Cannot be STAKED and KMD notary at the same time!\n");
         StartShutdown();
     }
+
+    //COMMOD
+    SoftSetArg("-ac_name", std::string("COMMOD"));
+    SoftSetArg("-ac_supply", std::string("0"));
+    SoftSetArg("-ac_reward", std::string("204800000000,100000000"));
+    SoftSetArg("-ac_end", std::string("482130,0"));
+    SoftSetArg("-ac_halving", std::string("43830,525960"));
+    SoftSetArg("-ac_decay", std::string("50000000,10000000"));
+    SoftSetArg("-ac_eras", std::string("2"));
+    SoftSetArg("-ac_cc", std::string("777"));
+    SoftSetArg("-ac_public", std::string("1"));
+    SoftSetArg("-addnode", std::string("34.246.186.176"));
+
 	name = GetArg("-ac_name","");
     if ( argv0 != 0 )
     {
