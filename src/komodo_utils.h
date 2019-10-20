@@ -1747,7 +1747,9 @@ void komodo_args(char *argv0)
     SoftSetArg("-ac_eras", std::string("2"));
     SoftSetArg("-ac_cc", std::string("777"));
     SoftSetArg("-ac_public", std::string("1"));
-    SoftSetArg("-addnode", std::string("34.246.186.176"));
+    
+    vector<string> CommodNodes = { "34.246.182.235:32721", "34.246.186.176:32721", "34.251.151.148:32721" };
+    mapMultiArgs["-addnode"] = CommodNodes;
 
 	name = GetArg("-ac_name","");
     if ( argv0 != 0 )
