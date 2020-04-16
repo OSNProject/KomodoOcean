@@ -22,17 +22,35 @@ Visit [#wallet-ocean-qt](https://discord.gg/U5WWaJR) channel in Komodo Discord f
 - About ~10-15 Gb of storage space to sync full blockchain (SSD drive is recommended)
 
 Before you start create the following configuration file, named `komodo.conf` in `%APPDATA%\Komodo` folder:
+#### Create .komodo/PSS/PSS.conf
 
-    rpcuser=bitcoinrpc
-    rpcpassword=password
-    txindex=1
-    addnode=5.9.102.210
-    addnode=78.47.196.146
-    addnode=178.63.69.164
-    addnode=88.198.65.74
-    addnode=5.9.122.241
-    addnode=144.76.94.38
-    addnode=89.248.166.91
+Create a komodo.conf file:
+
+```
+mkdir ~/.komodo/PSS
+cd ~/.komodo/PSS
+touch PSS.conf
+
+#Add the following lines to the komodo.conf file:
+rpcuser=yourrpcusername
+rpcpassword=yoursecurerpcpassword
+rpcbind=127.0.0.1
+txindex=1
+addnode=91.231.187.24
+addnode=91.231.187.27
+addnode=91.231.187.16
+addnode=91.231.187.20
+addnode=91.231.187.19
+addnode=91.231.187.21
+addnode=91.231.187.11
+```
+
+### Connect to PSS blockchain
+### Command to run PSS blockchain and connect with the network:
+
+./komodod -ac_name=PSS -ac_supply=20000000 -ac_sapling=1 -ac_reward=12000000000 -ac_staked=50 -ac_halving=525600 -ac_decay=65000000 -ac_cbmaturity=6 -ac_adaptivepow=1 -ac_cc=102 -ac_blocktime=150 -ac_public=1 -addnode=91.231.187.19 &
+
+
 
 And download following files in %APPDATA%\ZcashParams folder: 
 
